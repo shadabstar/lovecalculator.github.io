@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#box{
+			position: absolute;
+			top: 200px;
+			left: 400px;
+			border: 2px solid yellow;
+			width: 450px;
+			height: 200px;
+			background-color: pink;
+		   }
+		   input{
+		   	background-color: lightblue;
+		   	width: 200px;
+		   }
+		   button{
+		   	background-color: pink;
+		   }
+	</style>
+	<script>
+		 function check(){
+		var a=document.getElementById("yn").value;
+		var b=document.getElementById("ln").value;
+
+		if(a==""){
+			alert("Please enter Your name");
+		}
+		else if(!isNaN(a))
+			{
+				alert("Number are not allowed");
+	
+             }
+		 else if (a.length<=2) {
+		 	alert("Min length is 3");
+		 }
+		 else if (b.length<=2) {
+		 	alert("Min length is 3");
+		 }
+		 else if(b=="")
+		{
+		   alert("Please enter Love name");	
+		}
+		else if(!isNaN(b))
+		{
+			alert("Number are not allowed");
+		}
+		else{
+		var c=Math.random()*100;
+		c=Math.floor(c);
+		document.getElementById("rl").value=c+"%";
+		}
+	}
+	</script>
+</head>
+
+<body background="d:images\love.jpg">
+   <div id="main">
+   	<div>
+   		<header style="background-color: pink; font-size: 40px; text-align: center; font-family: monospace;">Love Calculater</header>
+   	</div>
+   	  <div id="box">
+   	  	
+   	  	<div>
+   	  	<input type="text" id="yn" placeholder="            Your name">
+   	  </div>
+   	  <div style="position: relative; left: 240px; bottom: 20px;">
+   	  	<input type="text" id="ln" placeholder="            Love name">
+   	  </div>
+   	  <div style="position: relative; top: 30px; left: 160px;">
+   	  	<button onClick="check();">CHECK LOVE</button>
+   	  </div>
+   	  
+   	  <div style="position: relative; top: 85px; left: 125px;">
+   	  <input type="text" id="rl" placeholder=" PERCENTAGES OF LOVE " readonly="">
+   	</div>
+  
+   	  
+   </div>
+   <div style="background-color: purple; height: 30px; width: 130px; position: absolute; left: 580px; font-size: 20px; font-family: cursive; color: tomato; ">
+   <marquee>BEST _OF _LUCK _FOR _RELATION:)</marquee>
+</div>
+</body>
+</html>
